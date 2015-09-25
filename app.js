@@ -7,8 +7,8 @@ attendanceBot.config(function($stateProvider, $urlRouterProvider) {
   });
 
   $stateProvider.state('students', {
-    url:"/students",
-    controller: "partials/students.html",
+    url: "/students",
+    templateUrl: "partials/students.html",
     controller: "StudentsCtrl"
   });
 });
