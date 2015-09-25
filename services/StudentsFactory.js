@@ -1,15 +1,12 @@
 attendanceBot.factory("StudentsFactory", function StudentsFactory() {
   var factory = {};
   factory.students = [
-    { name: "Sam Schmidt" },
-    { name: "Jessica Martin" },
-    { name: "Sandy Smith" },
-    { name: "Ryan Samuels" },
-    { name: "Brentwood Davis" }
+    { name: "Sam Schmidt", here: false },
+    { name: "Jessica Martin", here: false },
+    { name: "Sandy Smith", here: false},
+    { name: "Ryan Samuels", here: false },
+    { name: "Brentwood Davis", here: false }
   ];
-  factory.addStudent = function() {
-    factory.students.push({ name: factory.studentName });
-  };
 
   return factory;
 });

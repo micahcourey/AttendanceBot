@@ -1,20 +1,10 @@
 <div ng-show="students.length">
-  <h1>Click your name to sign in</h1>
-  <div class="row" ng-controller="AttendanceCtrl">
-    <div class="col-md-12" ng-show="studentsNotHere.length">
-    <ul>
-      <li ng-repeat="item in studentsNotHere = (students | filter:{isHere: false})">
-        <a ng-click="addStudentsHere(item)">sign in</a> {{item.name}}
-      </li>
-    </ul>
-  </div>
-</div>
-  <div class="col-md-12" ng-show="StudentsHere.length">
-    <ul>
-      <li ng-repeat="item in studentsHere = (students | filter:{isHere: true})">
-        <a ng-click="addStudentsHere(item)">sign out</a> {{item.name}}
-      </li>
-    </ul>
-  </div>
-
+  <h1>Please sign in</h1>
+  <ul>
+    <li ng-repeat="student in students">
+      <button class="btn btn-primary" ng-click="student.here = true" ng-show="!students.here">I'm Here</button>
+      <button class="btn btn-success" ng-click="student.here = false" ng-show="student.here">I'm leaving</button>
+      {{ student.name }}
+    </li>
+  </ul>
 </div>
