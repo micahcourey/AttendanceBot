@@ -1,10 +1,11 @@
 <div ng-show="students.length">
   <h1>Please sign in</h1>
   <ul>
-    <li ng-repeat="student in students">
-      <button class="btn btn-primary" ng-click="student.here = true" ng-show="!students.here">I'm Here</button>
-      <button class="btn btn-success" ng-click="student.here = false" ng-show="student.here">I'm leaving</button>
-      {{ student.name }}
+    <li ng-repeat="item in students">
+      <button class="btn btn-success" ng-click="item.here = false" ng-show="item.here">I'm leaving</button>
+      <button class="btn btn-primary" ng-click="item.here = true" ng-show="!item.here">I'm Here</button>
+      {{ item.name }}
     </li>
-  </ul>
+  </ul><br>
+  <h4><a ui-sref="home">Home</a></h4>
 </div>

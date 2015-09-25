@@ -1,14 +1,15 @@
 <div ng-show="students.length">
-  <h1>Students Here:</h1>
+  <h2>Students Here:</h2>
   <ul>
     <li ng-repeat="item in students | filter: {here: true}">
       {{ item.name }}
     </li>
   </ul>
-  <h1>Students Not Here</h1>
+  <h2>Students not Here:</h2>
   <ul>
     <li ng-repeat="item in students | filter: {here: false}">
       {{ item.name }}
     </li>
   </ul>
+  <h4><a ui-sref="home">Home</a></h4>
 </div>
