@@ -5,4 +5,10 @@ attendanceBot.config(function($stateProvider, $urlRouterProvider) {
     url: "",
     templateUrl: "partials/home.html"
   });
+
+  $stateProvider.state('students', {
+    url:"/students",
+    controller: "partials/students.html",
+    controller: "StudentsCtrl"
+  });
 });

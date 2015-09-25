@@ -1,0 +1,8 @@
+<div ng-show="students.length">
+  <h1>Click your name to sign in</h1>
+  <ul>
+    <li ng-repeat="item in students">
+      {{item.name}} <button type="button" class="btn btn-primary"><a ui-click="addStudentsHere(item)"></a>Sign in</button>
+    </li>
+  </ul>
+</div>
