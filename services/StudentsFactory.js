@@ -47,5 +47,11 @@ attendanceBot.factory("StudentsFactory", function StudentsFactory() {
     { name: "Barack Hussein Obama", here: false }
   ];
 
+  factory.addStudent = function() {
+    var student = {name: factory.studentName, here: false };
+    factory.students.push(student);
+    factory.studentName = null;
+  };
+
   return factory;
 });

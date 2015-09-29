@@ -1,4 +1,13 @@
 <h4><a ui-sref="home">Home</a></h4>
+<div>
+  <h2>Add a new student</h2>
+  <form ng-submit="StudentsFactory.addStudent()" class="form-inline" role="form">
+    <div class="form-group">
+      <input type="text" ng-model="StudentsFactory.studentName" class="form-control" id="student-name" placeholder="Enter students name">
+    </div>
+    <button type="submit" class="btn btn-primary">Add Student</button>
+  </form>
+</div>
 <div ng-show="students.length">
   <h2>Students Here:</h2>
   <ul>
