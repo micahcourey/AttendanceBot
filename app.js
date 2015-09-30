@@ -15,6 +15,6 @@ attendanceBot.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider.state('teachers', {
     url: "/teachers",
     templateUrl: "partials/teachers.html",
-    controller: "StudentsCtrl"
+    controller: "TeachersCtrl"
   });
 });
