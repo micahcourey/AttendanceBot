@@ -2,11 +2,15 @@
 <div ng-show="students.length">
   <h1>Please sign in</h1>
   <ul>
+
     <li ng-repeat="item in students">
+      <legend>
       <button class="btn btn-success" ng-click="item.here = false" ng-show="item.here">I'm leaving</button>
       <button class="btn btn-primary" ng-click="item.here = true" ng-show="!item.here">I'm Here</button>
       {{ item.name }}
+      </legend>
     </li>
+
   </ul>
 
 </div>

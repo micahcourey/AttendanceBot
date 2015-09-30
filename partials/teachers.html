@@ -12,13 +12,13 @@
   <h2>Students Here:</h2>
   <ul>
     <li ng-repeat="item in students | filter: {here: true}">
-      {{ item.name }}
+      <legend>{{ item.name }}</legend>
     </li>
   </ul>
   <h2>Students not Here:</h2>
   <ul>
     <li ng-repeat="item in students | filter: {here: false}">
-      {{ item.name }}
+      <legend>{{ item.name }}</legend>
     </li>
   </ul>
 </div>
