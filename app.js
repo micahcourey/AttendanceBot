@@ -3,18 +3,42 @@ var attendanceBot = angular.module('attendanceBot', ['ui.router']);
 attendanceBot.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider.state('home', {
     url: "",
-    templateUrl: "partials/home.html"
+    views: {
+      'header': {
+          templateUrl: "partials/header.html",
+          controller: "HeadersCtrl"
+      },
+      'home': {
+        templateUrl: "partials/home.html"
+      }
+    }
   });
 
   $stateProvider.state('students', {
     url: "/students",
-    templateUrl: "partials/students.html",
-    controller: "StudentsCtrl"
+      views: {
+      'header': {
+        templateUrl: "partials/header.html",
+        controller: "HeadersCtrl"
+      },
+      'body': {
+        templateUrl: "partials/students.html",
+        controller: "StudentsCtrl"
+      }
+    }
   });
 
   $stateProvider.state('teachers', {
     url: "/teachers",
-    templateUrl: "partials/teachers.html",
-    controller: "TeachersCtrl"
+    views: {
+      'header': {
+        templateUrl: "partials/header.html",
+        controller: "HeadersCtrl"
+      },
+      'body': {
+        templateUrl: "partials/teachers.html",
+        controller: "TeachersCtrl"
+      }
+    }
   });
 });

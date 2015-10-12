@@ -6,6 +6,7 @@
     <script src="lib/angular.js"></script>
     <script src="lib/angular-ui-router.js"></script>
     <script src="app.js"></script>
+    <script src="controllers/HeadersController.js"></script>
     <script src="controllers/TeachersController.js"></script>
     <script src="controllers/StudentsController.js"></script>
     <script src="services/StudentsFactory.js"></script>
@@ -14,7 +15,9 @@
   </head>
   <body>
     <div class="container">
-      <div ui-view></div>
+      <div ui-view="header"></div>
+      <div ui-view="home"></div>
+      <div ui-view="body"></div>
     </div>
   </body>
 </html>
