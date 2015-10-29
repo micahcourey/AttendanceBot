@@ -1,16 +1,21 @@
 <h4><a ui-sref="home">Home</a></h4>
-<div ng-show="students.length">
+<div ng-show="students.length" class="col-md-6">
   <h1>Please sign in</h1>
+
+
   <ul>
 
     <li ng-repeat="item in students">
       <legend>
-      <button class="btn" ng-click="item.here = false" ng-show="item.here">I'm leaving</button>
-      <button class="btn btn-primary" ng-click="item.here = true" ng-show="!item.here">I'm Here</button>
+      <button class="btn out" ng-click="item.here = false" ng-show="item.here">Sign Out</button>
+      <button class="btn in" ng-click="item.here = true" ng-show="!item.here">Sign In</button>
       {{ item.name }}
       </legend>
     </li>
 
   </ul>
 
+</div>
+<div class="col-md-6">
+  <img src="img/bot.png" alt="Photo of the attendace bot"  />
 </div>

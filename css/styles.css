@@ -1,6 +1,14 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Mono:400,500);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Mono:400,500|Ubuntu);
+
 body {
   background-color: #FBFFFE;
   margin-top: 80px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+h1 {
+  font-family: 'Roboto Mono', sans-serif;
 }
 
 ul {
@@ -8,13 +16,19 @@ ul {
 }
 
 .btn-huge {
+  margin: 10px 16px 10px 16px;
   padding:12px 22px;
   font-size:34px;
   width: 270px;
 }
 
-.btn {
+.btn.in {
   background-color: #2CA58D;
+  border-radius: 0;
+}
+
+.btn.out {
+  background-color: #0582CA;
   border-radius: 0;
 }
 
@@ -31,18 +45,19 @@ a {
 }
 
 a:hover {
-    color:#000;
+    color: #2CA58D;
 }
 
-.text-danger, a.text-danger {
+a.text {
     color:#fff;
 }
 
 .navbar-brand {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto Mono', sans-serif;
     font-weight: 500;
     font-size: 22px;
-}
+    margin-right: 30px;
+  }
 
 .icon-bar {
 	background-color:#080010;

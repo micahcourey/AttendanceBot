@@ -5,10 +5,10 @@
     <div class="form-group">
       <input type="text" ng-model="StudentsFactory.studentName" class="form-control" id="student-name" placeholder="Enter students name">
     </div>
-    <button type="submit" class="btn btn-primary">Add Student</button>
+    <button type="submit" class="btn in">Add Student</button>
   </form>
 </div>
-<div ng-show="students.length">
+<div ng-show="students.length" class="col-md-6">
   <h2>Students Here:</h2>
   <ul>
     <li ng-repeat="item in students | filter: {here: true}">
@@ -21,4 +21,7 @@
       <legend>{{ item.name }}</legend>
     </li>
   </ul>
+</div>
+<div class="col-md-6">
+  <img src="img/bot.png" alt="Photo of the attendace bot"  />
 </div>
